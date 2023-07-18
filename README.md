@@ -1,4 +1,4 @@
 # Computação - UFF | Python
 
 ## Listas de exercícios em Python
-Exercícios feitos para o curso de Ciência da Computação da UFF
+Exercícios feitos por mim e por colegas para o curso de Ciência da Computação da UFF
