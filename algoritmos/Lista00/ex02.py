@@ -1,29 +1,21 @@
-teste = 1
-rodadas = int(input())
-while 0 < rodadas < 1000:
-    print('Teste',teste)
-    p1 = input()
-    if 1 > len(p1) > 10 or not p1.isalpha():
-        quit()
-    p2 = input()
-    if 1 > len(p2) > 10 or not p2.isalpha():
-        quit()
-    while rodadas:
-        game = input()
+N = int(input('Número de rodadas: '))
+while 0 < N <= 10:
+    p1_score = 0
+    p2_score = 0
+    while N:
+        game = input('Números jogados: ')
         game = game.split()
-        if len(game) != 2:
-            quit()
-        res = 0
         for num in game:
             num = int(num)
-            if 0 > num > 5:
+            if 0 > num > 10:
                 quit()
-            res += num
-        if res % 2 == 0:
-            print(p1)
-        else:
-            print(p2)
-        rodadas -= 1
+        if game[0] > game[1]:
+            p1_score += 1
+        elif game[0] < game[1]:
+            p2_score += 1
+        N -= 1
     print()
-    teste += 1
-    rodadas = int(input())
+    print(f'Score Jogador #1: {p1_score} | Jogador #2: {p2_score}')
+    print()
+    N = int(input('Número de rodadas: '))
+    
